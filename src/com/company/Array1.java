@@ -8,7 +8,7 @@ public class Array1 {
     firstLast6([13, 6, 1, 2, 3]) → false */
 
     public boolean firstLast6(int[] nums) {
-        if(nums[0] == 6 || nums[nums.length-1] == 6){
+        if (nums[0] == 6 || nums[nums.length - 1] == 6) {
             return true;
         }
         return false;
@@ -21,13 +21,13 @@ public class Array1 {
     sameFirstLast([1, 2, 3, 1]) → true     */
 
     public boolean sameFirstLast(int[] nums) {
-        if( nums.length>=1){
-            if(nums[0] == nums[nums.length-1]){
+        if (nums.length >= 1) {
+            if (nums[0] == nums[nums.length - 1]) {
                 return true;
-            }else{
+            } else {
                 return false;
             }
-        }else{
+        } else {
             return false;
         }
     }
@@ -49,7 +49,24 @@ public class Array1 {
 
     /* Solution 2
     public boolean commonEnd(int[] a, int[] b) {
-        return (a[0]== b[0] || a[a.length-1] == b[b.length-1]);    }*/
+        return (a[0]== b[0] || a[a.length-1] == b[b.length-1]); } */
+
+    /* Array-1 > sum3
+    Given an array of ints length 3, return the sum of all the elements.
+    sum3([1, 2, 3]) → 6
+    sum3([5, 11, 2]) → 18      */
+    public int sum3(int[] nums) {
+        //return nums[0] + nums[1] + nums[2];
+        int sum = 0;
+        // Iterate through all elements and add them to sum
+        for (int i = 0; i < nums.length; i++) {
+            sum = sum + nums[i];
+        }
+        return sum;
+    }
+
+    /* Solution 2
+    return nums[0]+ nums[1] + nums[2]; */
 
 
 
