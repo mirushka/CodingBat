@@ -10,13 +10,14 @@ public class String1 {
 
     // String-1 > helloName
     // Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
-    public String helloName(String name) {
+    public static String helloName(String name) {
         return "Hello " + name + "!";
     }
 
+
     // String-1 > makeAbba
     // Given two strings, a and b, return the result of putting them together in the order abba, e.g. "Hi" and "Bye" returns "HiByeByeHi".
-    public String makeAbba(String a, String b) {
+    public static String makeAbba(String a, String b) {
         return a + b + b + a;
     }
 
@@ -41,6 +42,7 @@ public class String1 {
         String modif = str.length() > 2 ? str.substring(str.length() - 2) : str;
         return modif + modif + modif;
     }
+
 
     /* String-1 > firstTwo
     Given a string, return the string made of its first two chars, so the String "Hello" yields "He". If the string is shorter than length 2, return whatever there is, so "X" yields "X", and the empty string "" yields the empty string "". Note that str.length() returns the length of a string.
@@ -72,11 +74,12 @@ public class String1 {
     comboString("Hello", "hi") → "hiHellohi"
     comboString("hi", "Hello") → "hiHellohi"     */
     public String comboString(String a, String b) {
-
         if (a.length() > b.length()) {
             return b + a + b;
         } else {
             return a + b + a;
         }
     }
+
+
 }
