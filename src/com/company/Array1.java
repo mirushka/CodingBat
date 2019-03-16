@@ -6,7 +6,6 @@ public class Array1 {
     Given an array of ints, return true if 6 appears as either the first or last element in the array. The array will be length 1 or more.
     firstLast6([1, 2, 6]) → true
     firstLast6([13, 6, 1, 2, 3]) → false */
-
     public boolean firstLast6(int[] nums) {
         if (nums[0] == 6 || nums[nums.length - 1] == 6) {
             return true;
@@ -19,7 +18,6 @@ public class Array1 {
     Given an array of ints, return true if the array is length 1 or more, and the first element and the last element are equal.
     sameFirstLast([1, 2, 3]) → false
     sameFirstLast([1, 2, 3, 1]) → true     */
-
     public boolean sameFirstLast(int[] nums) {
         if (nums.length >= 1) {
             if (nums[0] == nums[nums.length - 1]) {
@@ -36,7 +34,6 @@ public class Array1 {
     Given 2 arrays of ints, a and b, return true if they have the same first element or they have the same last element. Both arrays will be length 1 or more.
     commonEnd([1, 2, 3], [7, 3]) → true
     commonEnd([1, 2, 3], [7, 3, 2]) → false      */
-
     //Solution 1
     public boolean commonEnd(int[] a, int[] b) {
         if (a[0] == b[0]) {
@@ -46,7 +43,6 @@ public class Array1 {
         }
         return false;
     }
-
     /* Solution 2
     public boolean commonEnd(int[] a, int[] b) {
         return (a[0]== b[0] || a[a.length-1] == b[b.length-1]); } */
@@ -64,16 +60,37 @@ public class Array1 {
         }
         return sum;
     }
-
     /* Solution 2
     return nums[0]+ nums[1] + nums[2]; */
 
     /* Array-1 > rotateLeft3
     Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2, 3} yields {2, 3, 1}.      */
-
     public int[] rotateLeft3(int[] nums) {
         int[] rotated = {nums[1], nums[2], nums[0]};
         return rotated;
+    }
+
+    /* Array-1 > reverse3
+    Given an array of ints length 3, return a new array with the elements in reverse order, so {1, 2, 3} becomes {3, 2, 1}.     */
+    public int[] reverse3(int[] nums) {
+        int[] reversed = {nums[2], nums[1], nums[0]};
+        return reversed;
+    }
+
+
+    /* Array-1 > maxEnd3
+    Given an array of ints length 3, figure out which is larger, the first or last element in the array, and set all the other elements to be that value. Return the changed array.
+    maxEnd3([2, 11, 3]) → [3, 3, 3]
+     */
+    public int[] maxEnd3(int[] nums) {
+        if (nums[0] > nums[2]) {
+            int[] modif = {nums[0], nums[0], nums[0]};
+            return modif;
+        } else {
+            int[] modif2 = {nums[2], nums[2], nums[2]};
+            return modif2;
+        }
+
     }
 
 }
