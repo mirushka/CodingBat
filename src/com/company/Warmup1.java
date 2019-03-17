@@ -35,5 +35,33 @@ public class Warmup1 {
         return false;
     }
 
+    /* Warmup-1 > sumDouble
+    Given two int values, return their sum. Unless the two values are the same, then return double their sum.   */
+    public int sumDouble(int a, int b) {
+        if (a == b) {
+            return (a + b) * 2;
+        }
+        return a + b;
+    }
+    /* Solution2
+    public int sumDouble(int a, int b) {
+  int sum = a+b;
+  if(a == b){
+    return sum
+    *2;
+  }
+  return sum;}      */
+
+    /* Warmup-1 > diff21
+    Given an int n, return the absolute difference between n and 21, except return double the absolute difference if n is over 21.
+    diff21(19) → 2     */
+    public int diff21(int n) {
+        int result = 21 - n;
+        if (result > 0) {
+            return result;
+        }
+        return 2 * result * (-1);
+    }
+
 
 }
