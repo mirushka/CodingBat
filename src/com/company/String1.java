@@ -107,5 +107,27 @@ public class String1 {
         return str.substring(str.length() - 2) + str.substring(0, len);
     }
 
+    /* String-1 > theEnd
+    Given a string, return a string length 1 from its front, unless front is false, in which case return a string length 1 from its back. The string will be non-empty.
+    theEnd("Hello", true) → "H"   */
+    public String theEnd(String str, boolean front) {
+        if (front == true) {
+            return str.substring(0, 1);
+        } else {
+            return (str.substring(str.length() - 1));
+        }
+    }
+
+    /* String-1 > withouEnd2
+    Given a string, return a version without both the first and last char of the string. The string may be any length, including 0.
+    withouEnd2("Hello") → "ell"    */
+    public String withouEnd2(String str) {
+        if (str.length() > 2) {
+            return str.substring(1, str.length() - 1);
+        }
+        return "";
+    }
+
+
 
 }
