@@ -117,6 +117,29 @@ public class Array1 {
         return modif;
     }
 
+    /* Array-1 > makeEnds
+    Given an array of ints, return a new array length 2 containing the first and last elements from the original array. The original array will be length 1 or more.
+    makeEnds([1, 2, 3]) → [1, 3]
+     */
+    public int[] makeEnds(int[] nums) {
+        int[] modif = {nums[0], nums[nums.length - 1]};
+        return modif;
+    }
+
+    /* Array-1 > has23
+    Given an int array length 2, return true if it contains a 2 or a 3.
+    has23([2, 5]) → true
+     */
+    public boolean has23(int[] nums) {
+        if (nums[0] == 2 || nums[1] == 3) {
+            return true;
+        } else if (nums[0] == 3 || nums[1] == 2) {
+            return true;
+        }
+        return false;
+    }
+
+
 
 
 }
