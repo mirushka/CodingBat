@@ -84,10 +84,28 @@ public class String1 {
     /* String-1 > nonStart
     Given 2 strings, return their concatenation, except omit the first char of each. The strings will be at least length 1.
     nonStart("Hello", "There") → "ellohere"  */
-
     public String nonStart(String a, String b) {
-
         return a.substring(1) + b.substring(1);
     }
+
+    /* String-1 > left2
+    Given a string, return a "rotated left 2" version where the first 2 chars are moved to the end. The string length will be at least 2.
+    left2("Hello") → "lloHe"    */
+    public String left2(String str) {
+        if (str.length() > 2) {
+            return str.substring(2) + str.substring(0, 2);
+        } else {
+            return str;
+        }
+    }
+
+    /* String-1 > right2
+    Given a string, return a "rotated right 2" version where the last 2 chars are moved to the start. The string length will be at least 2.
+    right2("Hello") → "loHel"   */
+    public String right2(String str) {
+        int len = str.length() - 2;
+        return str.substring(str.length() - 2) + str.substring(0, len);
+    }
+
 
 }
