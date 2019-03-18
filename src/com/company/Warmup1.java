@@ -90,4 +90,33 @@ public class Warmup1 {
         return (a + b == 10 || a == 10 || b == 10);
     }
 
+    /* Warmup-1 > nearHundred
+    Given an int n, return true if it is within 10 of 100 or 200. Note: Math.abs(num) computes the absolute value of a number.
+    nearHundred(93) → true
+     */
+    public boolean nearHundred(int n) {
+        return (n >= 90 & n <= 110 || n >= 190 & n <= 210);
+    }
+
+    /* Warmup-1 > posNeg
+    Given 2 int values, return true if one is negative and one is positive. Except if the parameter "negative" is true, then return true only if both are negative.
+    posNeg(1, -1, false) → true
+     */
+    public boolean posNeg(int a, int b, boolean negative) {
+        if (negative == false & (a < 0 & b > 0 || a > 0 & b < 0)) {
+            return true;
+        } else if (negative == true & a < 0 & b < 0) {
+            return true;
+        }
+        return false;
+    }
+    /* Solution 2
+    public boolean posNeg(int a, int b, boolean negative) {
+  if (negative) {
+    return (a < 0 && b < 0);
+  }
+  else {
+    return ((a < 0 && b > 0) || (a > 0 && b < 0));
+  }}     */
+
 }
