@@ -128,6 +128,32 @@ public class String1 {
         return "";
     }
 
+    /* String-1 > twoChar
+    Given a string and an index, return a string length 2 starting at the given index. If the index is too big or too small to define a string length 2, use the first 2 chars. The string length will be at least 2.
+    twoChar("java", 0) → "ja"
+     */
+    public String twoChar(String str, int index) {
+        if (index < 0) {
+            return str.substring(0, 2);
+        } else if (index + 2 <= str.length()) {
+            return str.substring(index, index + 2);
+        }
+        return str.substring(0, 2);
+    }
+
+    /* String-1 > middleThree
+    Given a string of odd length, return the string length 3 from its middle, so "Candy" yields "and". The string length will be at least 3.
+    middleThree("Candy") → "and"
+     */
+    public String middleThree(String str) {
+        //Defin the position of the middle character
+        int middle = str.length() / 2;
+        //Substract 1 from middle as startign point, define and of the string
+        String modif = str.substring(middle - 1, middle + 2);
+        return modif;
+    }
+
+
 
 
 }
