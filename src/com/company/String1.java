@@ -230,5 +230,20 @@ public class String1 {
         return str.substring(0, str.length() - 2) + str.charAt(str.length() - 1) + str.charAt(str.length() - 2);
     }
 
+    /* String-1 > seeColor
+    Given a string, if the string begins with "red" or "blue" return that color string, otherwise return the empty string.
+    seeColor("redxx") → "red"
+    seeColor("xxred") → ""
+     */
+    public String seeColor(String str) {
+        if (str.length() >= 3 && str.substring(0, 3).equals("red")) {
+            return "red";
+        }
+        if (str.length() >= 4 && str.substring(0, 4).equals("blue")) {
+            return "blue";
+        }
+        return "";
+    }
+
 
 }
