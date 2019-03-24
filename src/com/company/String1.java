@@ -189,6 +189,36 @@ public class String1 {
   return false;}      */
 
 
+    /* String-1 > lastChars
+    Given 2 strings, a and b, return a new string made of the first char of a and the last char of b, so "yo" and "java" yields "ya". If either string is length 0, use '@' for its missing char.
+    lastChars("last", "chars") → "ls"
+    lastChars("hi", "") → "h@"   */
+    public String lastChars(String a, String b) {
+        String first = "@";
+        String last = "@";
+
+        if (a.length() > 0) {
+            first = a.substring(0, 1);
+        }
+
+        if (b.length() > 0) {
+            last = b.substring(b.length() - 1);
+        }
+        return first + last;
+    }
+
+    /* String-1 > conCat
+    Given two strings, append them together (known as "concatenation") and return the result. However, if the concatenation creates a double-char, then omit one of the chars, so "abc" and "cat" yields "abcat".
+    conCat("abc", "cat") → "abcat"
+    conCat("abc", "") → "abc"   */
+    public String conCat(String a, String b) {
+        if (a.length() == 0 || b.length() == 0)
+            return a + b;
+
+        if (a.charAt(a.length() - 1) == b.charAt(0))
+            return a + b.substring(1);
+        return a + b;
+    }
 
 
 }
