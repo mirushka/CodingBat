@@ -89,4 +89,17 @@ public class Logic1 {
         return 2;
     }
 
+    /* Logic-1 > sortaSum
+    Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are forbidden, so in that case just return 20.
+    sortaSum(3, 4) → 7
+     */
+    public int sortaSum(int a, int b) {
+        int sum = a + b;
+        if (10 <= sum && sum <= 20) {
+            return 20;
+        }
+        return sum;
+    }
+
+
 }
