@@ -150,7 +150,6 @@ public class Array1 {
             }
         }
         return true;
-
     }
 
 
