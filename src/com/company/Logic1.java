@@ -118,9 +118,43 @@ public class Logic1 {
             return "10:00";
         }
         return "7:00";
-
     }
 
+
+    /* Logic-1 > love6
+    The number 6 is a truly great number. Given two int values, a and b, return true if either one is 6. Or if their sum or difference is 6. Note: the function Math.abs(num) computes the absolute value of a number.
+    love6(4, 5) → false
+     */
+    public boolean love6(int a, int b) {
+        return (a == 6 || b == 6 || a + b == 6 || a - b == 6 || b - a == 6);
+    }
+    /* Solution 2
+    public boolean love6(int a, int b) {
+        if( a == 6 || b ==6){
+            return true;
+        }
+         return (a+b ==6 || Math.abs(a-b) == 6 );
+    }   */
+
+    /*  Logic-1 > in1To10
+    Given a number n, return true if n is in the range 1..10, inclusive. Unless outsideMode is true, in which case return true if the number is less or equal to 1, or greater or equal to 10.
+    in1To10(5, false) → true
+     */
+    public boolean in1To10(int n, boolean outsideMode) {
+        if (outsideMode) {
+            return (n <= 1 || n >= 10);
+        } else {
+            return (1 <= n && n <= 10);
+        }
+    }
+    /* Solution 2
+    public boolean in1To10(int n, boolean outsideMode) {
+  if(outsideMode)
+    return (n <= 1 || n>=10);
+  return(1<=n && n<=10);
+}
+
+     */
 
 
 }
