@@ -189,5 +189,29 @@ public class Warmup1 {
     return last + str + last;
     }     */
 
+    /* Warmup-1 > or35
+    Return true if the given non-negative number is a multiple of 3 or a multiple of 5. Use the % "mod" operator -- see Introduction to Mod
+    or35(3) → true
+    or35(10) → true
+     */
+    public boolean or35(int n) {
+        return (n % 3 == 0 || n % 5 == 0);
+    }
+
+    /* Warmup-1 > front22
+    Given a string, take the first 2 chars and return the string with the 2 chars added at both the front and back, so "kitten" yields"kikittenki". If the string length is less than 2, use whatever chars are there.
+    front22("kitten") → "kikittenki"
+     */
+    public String front22(String str) {
+        String sub;
+
+        if (str.length() > 2) {
+            sub = str.substring(0, 2);
+        } else {
+            sub = str;
+        }
+        return sub + str + sub;
+    }
+
 
 }
