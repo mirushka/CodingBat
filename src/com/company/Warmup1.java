@@ -173,5 +173,21 @@ public class Warmup1 {
         return front + front + front;
     }
 
+    /* Warmup-1 > backAround
+    Given a string, take the last char and return a new string with the last char added at the front and back, so "cat" yields "tcatt". The original string will be length 1 or more.
+    backAround("cat") → "tcatt"
+    backAround("Hello") → "oHelloo"
+     */
+    public String backAround(String str) {
+        char last = str.charAt(str.length() - 1);
+        return last + str + last;
+    }
+    /* Solution 2
+    public String backAround(String str) {
+  // Get the last char
+    String last = str.substring(str.length() - 1);
+    return last + str + last;
+    }     */
+
 
 }
