@@ -163,11 +163,14 @@ public class Warmup1 {
     front3("Chocolate") → "ChoChoCho"
      */
     public String front3(String str) {
+        String front;
+
         if (str.length() >= 3) {
-            str = str.substring(0, 3);
-            return str + str + str;
+            front = str.substring(0, 3);
+        } else {
+            front = str;
         }
-        return str + str + str;
+        return front + front + front;
     }
 
 
