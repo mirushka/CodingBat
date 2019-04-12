@@ -245,6 +245,16 @@ public class Logic1 {
         return str;
     }
 
+    /* Logic-1 > twoAsOne
+    Given three ints, a b c, return true if it is possible to add two of the ints to get the third.
+    twoAsOne(1, 2, 3) → true
+    twoAsOne(3, 1, 2) → true
+     */
+    public boolean twoAsOne(int a, int b, int c) {
+        return (a + b == c || b + c == a || c + a == b);
+    }
+
+
 
 }
 
