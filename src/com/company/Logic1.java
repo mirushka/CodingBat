@@ -284,7 +284,13 @@ public class Logic1 {
         return false;
     }
 
+    /* Solution 2
+       if(equalOk)
+        return a <= b && b <= c;
 
+    return a < b && b < c;
+}
+     */
 
 }
 
