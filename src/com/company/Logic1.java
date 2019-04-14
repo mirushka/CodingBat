@@ -292,6 +292,15 @@ public class Logic1 {
 }
      */
 
+    /* Logic-1 > lessBy10
+    Given three ints, a b c, return true if one of them is 10 or more less than one of the others.
+    lessBy10(1, 7, 11) → true
+     */
+    public boolean lessBy10(int a, int b, int c) {
+        return (Math.abs(a - b) >= 10 || Math.abs(b - c) >= 10 || Math.abs(c - a) >= 10);
+    }
+
+
 }
 
 
